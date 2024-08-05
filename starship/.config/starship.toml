@@ -1,0 +1,156 @@
+
+format = """
+$username\
+$os\
+$hostname\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$python\
+$conda\
+$rust\
+$golang\
+$time\
+$cmd_duration
+$character\
+"""
+
+# Enable the blank line at the start of the prompt
+add_newline = true
+
+# Displays the user name
+[username]
+show_always = true
+style_user = "bold fg:#11dfff"
+style_root = "fg:#ff0000"
+format = '[ ✠ $user ✠ ]($style)'
+disabled = false
+
+# Displays a symbol of your operating system. Choose which symbol to display in the [os.symbols] module
+[os]
+style = "bold fg:#145a32"
+format = '[$symbol]($style)'
+disabled = false # Disabled by default
+
+[os.symbols]
+openSUSE = "🦎"
+
+# Dispalys the hostname
+[hostname]
+ssh_only = false
+#ssh_symbol = '🌐 '
+style = "bold fg:#dc18ee"
+format = '[ ✠ $hostname ✠ ]($style)'
+disabled = false
+
+# Displays the current working directory
+[directory]
+read_only = ' 🔒'
+style = "bold italic fg:#ff006f"
+read_only_style = "fg:#ff0000"
+format = "[$path]($style)[$read_only]($read_only_style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+# Displays the time it takes to execute a command
+[cmd_duration]
+format = 'took [$duration]($style)'
+min_time = 4
+show_milliseconds = false
+disabled = false
+style = "bold italic fg:#dffa30"
+
+# Displays the time in 24hr format
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bold fg:#56f469"
+format = '[ 🕙 $time ]($style)'
+
+[character]
+format = '$symbol '
+success_symbol = "[❱](bold fg:#fd00d3)"
+error_symbol = "[❱](bold fg:#F90000)"
+disabled = false
+
+
+[python]
+symbol = "🐍 "
+pyenv_version_name = true
+format = '[ via ${symbol}python (${version} )(\($virtualenv\) )]($style)'
+style = "bold fg:#24ff14"
+pyenv_prefix = "venv "
+python_binary = ["./venv/bin/python", "python", "python3"]
+detect_extensions = ["py"]
+version_format = "v${raw}"
+disabled = false
+
+[conda]
+symbol = "🅒 "
+style = "bold fg:#ffffff"
+format = ' [$symbol$environment]($style)'
+ignore_base = false
+disabled = false
+
+[rust]
+style = "fg:#ff5d1d"
+format = '[ via $symbol($version )]($style)'
+
+
+[git_branch]
+symbol = " 🌱"
+style = "bold fg:#ffffff"
+format = ' on [$symbol $branch]($style)'
+disabled = false
+
+[git_commit]
+commit_hash_length = 7
+format = '[\($hash$tag\)]($style) '
+style = "bold fg:#ffffff"
+tag_symbol = '🔖 '
+disabled = false
+
+[git_state]
+style = "bold fg#ffffff"
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = '[🍒 PICKING](bold red)'
+disabled = false
+
+[git_metrics]
+added_style = 'bold fg:#1eff1a'
+deleted_style = 'bold fg:#ff1111'
+format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
+disabled = true
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style))'
+style = "bold fg:#ffffff"
+conflicted = '🏳'
+ahead = '🏎💨'
+behind = '😰'
+diverged = '😵'
+up_to_date = '✓'
+untracked = '🤷'
+stashed = '📦'
+modified = '📝'
+staged = '[++\($count\)](green)'
+renamed = '👅'
+deleted = '🗑'
+disabled = false
+
+
+[golang]
+symbol = "🏎💨 "
+style = "bold fg:#06eee6"
+format = '[ via $symbol ($version)($mod_version)]($style)'
+detect_extensions = ['go']
+detect_files = ['go.mod', 'go.sum', 'go.work', 'glide.yaml', 'Gopkg.yml', 'Gopkg.lock', '.go-version']
+disabled = false
+
+
+
+
+
