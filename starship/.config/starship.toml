@@ -123,7 +123,7 @@ disabled = false
 added_style = 'bold fg:#1eff1a'
 deleted_style = 'bold fg:#ff1111'
 format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
-disabled = true
+disabled = false
 
 [git_status]
 format = '([\[$all_status$ahead_behind\]]($style))'

@@ -129,28 +129,6 @@ source $ZSH/oh-my-zsh.sh
 # - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
 #
-# Aliases
-alias zshrc="vim ~/.zshrc"
-alias ohmyzsh="vim ~/.oh-my-zsh"
-alias vim="nvim"
-alias cd..="cd .."
-alias grep="grep --color=auto"
-alias ll="eza -lh --icons=auto"
-alias la="eza -lah --icons=auto --group-directories-first"
-alias ldot="eza -ld --group-directories-first .*"
-#Zypper aliases
-alias zh="zypper -h"
-alias zinfo="zypper info --requires --recommends"
-alias zdup="sudo zypper ref && sudo zypper dup -y"
-alias zin="sudo zypper in"
-alias zrm="sudo zypper rm --clean-deps"
-#Updating the flatpak packages
-alias fupd="flatpak update --user -y"
-#Clearing the terminal
-alias cls="clear"
-
-alias cat="bat"
-
 # History
 HISTSIZE=5000
 HISTFILE=~/.zsh_history
