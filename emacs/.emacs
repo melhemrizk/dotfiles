@@ -28,13 +28,13 @@
   (setq catppuccin-flavor 'mocha)
   (load-theme 'catppuccin t))
 
-(tool-bar-mode -1)
-(menu-bar-mode -1)
-(scroll-bar-mode 1)
-(column-number-mode 1)
-(global-display-line-numbers-mode 1)
-(electric-pair-mode 1)
-(show-paren-mode 1)
+(tool-bar-mode -1)                    ;; Disable the tool bar.
+(menu-bar-mode -1)                    ;; Disable the menu bar.
+(scroll-bar-mode 1)                   ;; Keep the scroll bar. To disable change the value to 0 or -1.
+(column-number-mode 1)                ;; Show column number. The cloumn number is shown in the mode line.
+(global-display-line-numbers-mode 1)  ;; Show line numbers.
+(electric-pair-mode 1)                ;; Auto close brakets, braces, quotes and parentheses.
+(show-paren-mode 1)                   ;; Highlight the pairs of parentheses
 
 ;; Font
 (add-to-list 'default-frame-alist '(font . "Source Code Pro Light-20"))
@@ -80,7 +80,7 @@
   :hook ((go-mode . lsp-deferred))
   :commands lsp lsp-deferred
   :config
-  (setq lsp-gopls-server-path "gopls")  ; Ensure this path is correct
+  (setq lsp-gopls-server-path "gopls")  ;; Ensure this path is correct
   (setq lsp-go-link-target "godoc")
   (setq lsp-go-use-placeholders t)
   (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]\\vendor\\'")
@@ -90,7 +90,7 @@
   (lsp-register-custom-settings
    '(("gopls.completeUnimported" t t)
      ("gopls.staticcheck" t t)))
-  (setq lsp-auto-guess-root t))  ; This helps with project root detection
+  (setq lsp-auto-guess-root t))         ;; This helps with project root detection
 
 ;; Go mode setup
 (use-package go-mode
@@ -112,7 +112,7 @@
   (add-hook 'before-save-hook #'lsp-organize-imports t t)
   (add-hook 'go-mode-hook #'lsp-go-install-save-hooks))
 
-;;Company setup
+;; Company setup
 (use-package company
   :ensure t
   :config
