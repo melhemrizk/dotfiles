@@ -3,4 +3,6 @@
 .stversions/
 codium/
 git/
+emacs/.emacs.d
+emacs/.authinfo
 
