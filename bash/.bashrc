@@ -1,3 +1,5 @@
+# 01001101 01100101 01101100 01101000 01100101 01101101 01010010 01101001
+# 01111010 01101011
 # Sample .bashrc for SUSE Linux
 # Copyright (c) SUSE Software Solutions Germany GmbH
 
@@ -10,7 +12,10 @@
 # here, since multilingual X sessions would not work properly if LANG is over-
 # ridden in every subshell.
 
-#Customizing the bash prompt
+# Editor
+export EDITOR=/usr/bin/emacs
+
+# Customizing the bash prompt
 
 #bold=$(tput bold)
 #user_color=$(tput setaf 202)
@@ -32,12 +37,12 @@
 #PS1+="\[${reset}\]";
 #export PS1;
 
-#Customizing the bash prompt with starship
+# Customizing the bash prompt with starship
 
 eval "$(starship init bash)"
 
 
-#Aliases
+# Aliases
 
 #alias '+'='pushd .'
 alias -- -='popd'
@@ -65,9 +70,9 @@ alias you='if test "$EUID" = 0 ; then /sbin/yast2 online_update ; else su - -c "
 # Requesting info about a certain package
 alias zinfo='zypper info --requires --recommends'
 # Updating the system
-alias upd='sudo zypper ref && sudo zypper dup -y'
+alias zdup='sudo zypper ref && sudo zypper dup -y'
 # Updating the flatpk packages
-alias upf='flatpak update --user -y'
+alias fupd='flatpak update --user -y'
 # Clearing the terminal screen
 alias cls='clear'
 

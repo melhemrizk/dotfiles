@@ -1,9 +1,13 @@
+# ZSH configuration file
+
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# Editor
+export EDITOR=/usr/bin/emacs
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
@@ -74,7 +78,7 @@ HIST_STAMPS="dd/mm/yyyy"
 
 plugins=(golang git command-not-found docker)
 
-#Golang plugin aliases
+#Golang plugin aliases for reference
 #gob 	go build 	Build your code
 #goc 	go clean 	Removes object files from package source directories
 #god 	go doc 	Prints documentation comments
@@ -165,7 +169,7 @@ eval "$(zoxide init --cmd cd zsh)"
 # Initialize fuzzy find
 eval "$(fzf --zsh)"
 
-# zsh syntax highlighting
+# ZSH syntax highlighting
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 

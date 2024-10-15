@@ -1,3 +1,5 @@
+# Configuration file for alacritty terminal
+
 live_config_reload = true
 
 [bell]
@@ -71,7 +73,7 @@ family = "Source Code Pro"
 
 [font.normal]
 family = "Source Code Pro"
-style = "Regular"
+style = "Light"
 
 [font.offset]
 x = 0

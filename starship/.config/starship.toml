@@ -1,3 +1,4 @@
+# Starship configuration for the command prompt
 
 format = """
 $username\
@@ -41,7 +42,7 @@ openSUSE = "🦎"
 # Dispalys the hostname
 [hostname]
 ssh_only = false
-#ssh_symbol = '🌐 '
+# ssh_symbol = '🌐 '
 style = "bold fg:#dc18ee"
 format = '[ ✠ $hostname ✠ ]($style)'
 disabled = false
@@ -76,7 +77,6 @@ success_symbol = "[❱](bold fg:#fd00d3)"
 error_symbol = "[❱](bold fg:#F90000)"
 disabled = false
 
-
 [python]
 symbol = "🐍 "
 pyenv_version_name = true
@@ -98,7 +98,6 @@ disabled = false
 [rust]
 style = "fg:#ff5d1d"
 format = '[ via $symbol($version )]($style)'
-
 
 [git_branch]
 symbol = " 🌱"
@@ -141,7 +140,6 @@ renamed = '👅'
 deleted = '🗑'
 disabled = false
 
-
 [golang]
 symbol = "🏎💨 "
 style = "bold fg:#06eee6"
@@ -149,8 +147,4 @@ format = '[ via $symbol ($version)($mod_version)]($style)'
 detect_extensions = ['go']
 detect_files = ['go.mod', 'go.sum', 'go.work', 'glide.yaml', 'Gopkg.yml', 'Gopkg.lock', '.go-version']
 disabled = false
-
-
-
-
 

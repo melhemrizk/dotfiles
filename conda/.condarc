@@ -1,3 +1,5 @@
+# Conda configuration file
+
 auto_activate_base: False
 channels:
   - defaults
