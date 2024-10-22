@@ -35,3 +35,7 @@ alias cls="clear"
 alias cat="bat"
 
 alias dd="dd bs=4M status=progress"
+
+alias reboot="systemctl reboot"
+alias poweroff="systemctl poweroff"
+

@@ -9,7 +9,7 @@
  '(delete-selection-mode nil)
  '(inhibit-startup-screen t)
  '(package-selected-packages
-   '(flycheck lsp-ui catppuccin-theme lsp-mode go-mode multiple-cursors)))
+   '(colorful-mode flycheck lsp-ui catppuccin-theme lsp-mode go-mode multiple-cursors)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

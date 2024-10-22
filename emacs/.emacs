@@ -46,7 +46,8 @@
       delete-old-versions t
       kept-new-versions 3
       kept-old-versions 2
-      version-control t)
+      version-control t
+      initial-scratch-message "")
 
 ;; Ido mode
 (ido-mode 1)
@@ -129,6 +130,8 @@
         lsp-ui-sideline-enable t
         lsp-ui-imenu-enable t
         lsp-ui-flycheck-enable t))
+
+(use-package colorful-mode)
 
 (provide '.emacs)
 ;;; .emacs ends here

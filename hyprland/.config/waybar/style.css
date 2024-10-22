@@ -1,0 +1,101 @@
+* {
+    border:        none;
+    border-radius: 5px;
+    font-family:   "Source Sans Pro", "FontAwesome 6 Free";
+    font-size:     20px;
+    box-shadow:    none;
+    text-shadow:   none;
+    transition-duration: 0s;
+}
+
+window#waybar {
+    color: #ffffff;
+    background-color: #008fc3;
+    border-bottom: 3px solid rgba(35, 185, 171, 0.4)
+}
+
+window#waybar.solo {
+    color: #ffffff;
+}
+
+tooltip {
+    background-color: #202020;
+    opacity: 0.8;
+    border-radius: 10px;
+}
+
+tooltip label {
+    color: #33ffff
+}
+
+#workspaces {
+    margin: 3px 5px;
+    background: #5959aa;
+    border-radius: 1rem;
+}
+
+#workspaces button {
+    color: #c8c8c8;
+    border-radius: 1rem;
+}
+
+#workspaces button.active {
+    color: #99ff33;
+    border-radius: 1rem;
+}
+
+#workspaces button.urgent {
+    color: #ff3333;
+    border-radius: 1rem;
+}
+
+#network, 
+#bluetooth,
+#power-profiles-daemon,
+#clock.date,
+#clock.time,
+#pulseaudio {
+    padding: 0 5px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+#pulseaudio {
+    background-color: #A4036F
+}
+
+#bluetooth {
+    background-color: #F1A208
+}
+
+#bluetooth.disabled {
+    color: #808080;
+    background-color: #F1A208
+}
+
+#bluetooth.off {
+    color: #808080;
+    background-color: #F1A208
+}
+
+#bluetooth.connected {
+    color: #0010f5;
+    background-color: #F1A208
+}
+
+#network {
+    background-color: #49516F
+}
+
+#power-profiles-daemon {
+    background-color: #16DB93
+}
+
+#clock.date {
+    background-color: #A77464
+}
+
+#clock.time {
+    background-color: #F29E4C
+}
+
