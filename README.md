@@ -1,6 +1,6 @@
 <h1>dotfiles</h1>
 
-Config files for some programs that i use:
+<p>Config files for some programs that i use:</p>
 <ol>
   <li>alacritty</li>
   <li>Bash</li>
