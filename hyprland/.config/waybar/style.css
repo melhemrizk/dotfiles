@@ -1,7 +1,21 @@
+/*
+
+#    #   ##   #   # #####    ##   #####      ####  ##### #   # #      ######
+#    #  #  #   # #  #    #  #  #  #    #    #        #    # #  #      #
+#    # #    #   #   #####  #    # #    #     ####    #     #   #      #####
+# ## # ######   #   #    # ###### #####          #   #     #   #      #
+##  ## #    #   #   #    # #    # #   #     #    #   #     #   #      #
+#    # #    #   #   #####  #    # #    #     ####    #     #   ###### ######
+
+*/
+
+/* -- Styling the Waybar panel -- */
+
+
 * {
     border:        none;
     border-radius: 5px;
-    font-family:   "Source Sans Pro", "FontAwesome 6 Free";
+    font-family:   "Source Sans Pro", "FontAwesome 6 Free", "Font Awesome 6 Brands";
     font-size:     20px;
     box-shadow:    none;
     text-shadow:   none;
@@ -10,7 +24,7 @@
 
 window#waybar {
     color: #ffffff;
-    background-color: #008fc3;
+    background-color: #006184;
     border-bottom: 3px solid rgba(35, 185, 171, 0.4)
 }
 
