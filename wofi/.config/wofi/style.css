@@ -1,0 +1,64 @@
+/*
+  ##      ##  #######  ######## ####
+  ##  ##  ## ##     ## ##        ##
+  ##  ##  ## ##     ## ##        ##
+  ##  ##  ## ##     ## ######    ##
+  ##  ##  ## ##     ## ##        ##
+  ##  ##  ## ##     ## ##        ##
+   ###  ###   #######  ##       ####
+*/
+
+ window {
+margin: 5px;
+border-radius: 5px;
+border: 2px solid #0e4d47;
+background-color: #23b9ab;
+}
+
+
+#input {
+font: Hack;
+font-size: 16;
+margin: 5px;
+border-radius: 5px;
+border: 2px solid #006184;
+background-color: #202020;
+}
+
+#inner-box {
+margin: 5px;
+border-radius: 5px;
+border: 2px solid #23b9ab;
+background-color: #202020;
+opacity: 0.9
+}
+
+#outer-box {
+margin: 5px;
+border-radius: 5px;
+border: 2px solid #006184;
+background-color: #006184;
+}
+
+#scroll {
+margin: 5px;
+border-radius: 5px;
+border: 2px solid #23b9ab;
+background-color: #0e4d47;
+}
+
+#text {
+font: Hack;
+font-size: 18;
+margin: 5px;
+border-radius: 5px;
+border: 2px solid transparent;
+background-color: transparent;
+}
+
+#entry:selected {
+border-radius: 5px;
+background-color: #A4036F;
+}
+
+
