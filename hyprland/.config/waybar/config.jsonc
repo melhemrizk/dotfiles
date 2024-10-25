@@ -4,7 +4,7 @@
 // ##  ##  ## ##     ##    ##    ########  ##     ## ########
 // ##  ##  ## #########    ##    ##     ## ######### ##   ##
 // ##  ##  ## ##     ##    ##    ##     ## ##     ## ##    ##
-// ###  ###   ##     ##    ##    ########  ##     ## ##     ##
+//  ###  ###  ##     ##    ##    ########  ##     ## ##     ##
 
 
 // --Waybar Configuration-- //
@@ -27,7 +27,6 @@
         "pulseaudio",
         "bluetooth",
         "network",
-        "power-profiles-daemon",
         "clock#date",
         "clock#time"
     ],
@@ -56,16 +55,16 @@
         "class<.*firefox.*> title<.*GitHub.*>": "",
         "class<kitty>": "  ",
         "Konsole": "  ",
-        "foot": "",
         "Vscodium": "󰨞"
         },
     },
      "tray": {
-        "icon-size": 21,
-        "spacing": 10
+        "icon-size": 22,
+        "spacing": 10,
+	"show-passive-items": true
      },
      "clock#time": {
-         "timezone": "Asia/Beirut",
+        "timezone": "Asia/Beirut",
         "format": "{:%H:%M}   ",
         "tooltip": false
      },
@@ -89,17 +88,6 @@
                     "on-scroll-up": "shift_up",
                     "on-scroll-down": "shift_down"
                     }
-    },
-    "power-profiles-daemon": {
-      "format": "{icon}",
-      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-      "tooltip": true,
-      "format-icons": {
-        "default": "",
-        "performance": "",
-        "balanced": "",
-        "power-saver": ""
-      }
     },
     "network": {
         //"interface": "wlp2*", // (Optional) To force the use of this interface

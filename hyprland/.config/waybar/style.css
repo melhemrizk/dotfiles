@@ -33,7 +33,7 @@ window#waybar.solo {
 }
 
 tooltip {
-    background-color: #202020;
+    background-color: #190018;
     opacity: 0.8;
     border-radius: 10px;
 }
@@ -99,10 +99,6 @@ tooltip label {
 
 #network {
     background-color: #49516F
-}
-
-#power-profiles-daemon {
-    background-color: #16DB93
 }
 
 #clock.date {

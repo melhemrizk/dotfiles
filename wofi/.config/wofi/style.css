@@ -19,17 +19,18 @@ background-color: #23b9ab;
 #input {
 font: Hack;
 font-size: 16;
+color: #ffffff
 margin: 5px;
 border-radius: 5px;
 border: 2px solid #006184;
-background-color: #202020;
+background-color: #c3c3c3;
 }
 
 #inner-box {
 margin: 5px;
 border-radius: 5px;
 border: 2px solid #23b9ab;
-background-color: #202020;
+background-color: #190018;
 opacity: 0.9
 }
 
@@ -54,6 +55,10 @@ margin: 5px;
 border-radius: 5px;
 border: 2px solid transparent;
 background-color: transparent;
+}
+
+#entry {
+color: #ffffff
 }
 
 #entry:selected {
