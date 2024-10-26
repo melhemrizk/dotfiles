@@ -22,6 +22,12 @@
     transition-duration: 0s;
 }
 
+#window {
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 window#waybar {
     color: #ffffff;
     background-color: #006184;
