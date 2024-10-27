@@ -66,9 +66,9 @@
         "format": "󰳶 {title}"
     },
      "tray": {
-        "icon-size": 22,
+        "icon-size": 21,
         "spacing": 10,
-	"show-passive-items": true
+        "show-passive-items": true
      },
      "clock#time": {
         "timezone": "Asia/Beirut",

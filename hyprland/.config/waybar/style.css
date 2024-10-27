@@ -30,7 +30,7 @@
 
 window#waybar {
     color: #ffffff;
-    background-color: #006184;
+    background-color: #0B132B;
     border-bottom: 3px solid rgba(35, 185, 171, 0.4);
     opacity: 0.9;
 }
@@ -51,12 +51,12 @@ tooltip label {
 
 #workspaces {
     margin: 3px 5px;
-    background: #5959aa;
+    background: #034748;
     border-radius: 1rem;
 }
 
 #workspaces button {
-    color: #c8c8c8;
+    color: #E2EFDE;
     border-radius: 1rem;
 }
 
@@ -66,10 +66,11 @@ tooltip label {
 }
 
 #workspaces button.urgent {
-    color: #ff3333;
+    color: #D62828;
     border-radius: 1rem;
 }
 
+#tray
 #network, 
 #bluetooth,
 #power-profiles-daemon,
@@ -82,37 +83,37 @@ tooltip label {
 }
 
 #pulseaudio {
-    background-color: #A4036F
+    background-color: #D90368
 }
 
 #bluetooth {
-    background-color: #F1A208
+    background-color: #F77F00
 }
 
 #bluetooth.disabled {
     color: #808080;
-    background-color: #F1A208
+    background-color: #F77F00
 }
 
 #bluetooth.off {
     color: #808080;
-    background-color: #F1A208
+    background-color: #F77F00
 }
 
 #bluetooth.connected {
     color: #0010f5;
-    background-color: #F1A208
+    background-color: #F77F00
 }
 
 #network {
-    background-color: #49516F
+    background-color: #6689A1
 }
 
 #clock.date {
-    background-color: #A77464
+    background-color: #9B7E46
 }
 
 #clock.time {
-    background-color: #F29E4C
+    background-color: #403d39
 }
 
