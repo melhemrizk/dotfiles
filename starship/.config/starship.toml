@@ -33,14 +33,14 @@ add_newline = true
 # Displays the user name
 [username]
 show_always = true
-style_user = "bold fg:#23b9ab"
+style_user = "bold fg:#71A9F7"
 style_root = "fg:#ff3333"
 format = '[ ✠ $user ✠ ]($style)'
 disabled = false
 
 # Displays a symbol of your operating system. Choose which symbol to display in the [os.symbols] module
 [os]
-style = "bold fg:#145a32"
+style = "bold fg:#034748"
 format = '[$symbol]($style)'
 disabled = false # Disabled by default
 
@@ -51,14 +51,14 @@ openSUSE = "🦎"
 [hostname]
 ssh_only = false
 # ssh_symbol = '🌐 '
-style = "bold fg:#dc18ee"
+style = "bold fg:#D90368"
 format = '[ ✠ $hostname ✠ ]($style)'
 disabled = false
 
 # Displays the current working directory
 [directory]
 read_only = ' 🔒'
-style = "bold italic fg:#ff006f"
+style = "bold italic fg:#F4AC45"
 read_only_style = "fg:#ff0000"
 format = "[$path]($style)[$read_only]($read_only_style)"
 truncation_length = 3
@@ -70,18 +70,18 @@ format = 'took [$duration]($style)'
 min_time = 4
 show_milliseconds = false
 disabled = false
-style = "bold italic fg:#dffa30"
+style = "bold italic fg:#04A777"
 
 # Displays the time in 24hr format
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
-style = "bold fg:#56f469"
+style = "bold fg:#F98948"
 format = '[ 🕙 $time ]($style)'
 
 [character]
 format = '$symbol '
-success_symbol = "[❱](bold fg:#fd00d3)"
+success_symbol = "[❱](bold fg:#D90368)"
 error_symbol = "[❱](bold fg:#F90000)"
 disabled = false
 
@@ -89,7 +89,7 @@ disabled = false
 symbol = "🐍 "
 pyenv_version_name = true
 format = '[ via ${symbol}python (${version} )(\($virtualenv\) )]($style)'
-style = "bold fg:#24ff14"
+style = "bold fg:#99D17B"
 pyenv_prefix = "venv "
 python_binary = ["./venv/bin/python", "python", "python3"]
 detect_extensions = ["py"]
@@ -104,7 +104,7 @@ ignore_base = false
 disabled = false
 
 [rust]
-style = "fg:#ff5d1d"
+style = "fg:#F77F00"
 format = '[ via $symbol($version )]($style)'
 
 [git_branch]
@@ -150,7 +150,7 @@ disabled = false
 
 [golang]
 symbol = "🏎💨 "
-style = "bold fg:#06eee6"
+style = "bold fg:#1AFFD5"
 format = '[ via $symbol ($version)($mod_version)]($style)'
 detect_extensions = ['go']
 detect_files = ['go.mod', 'go.sum', 'go.work', 'glide.yaml', 'Gopkg.yml', 'Gopkg.lock', '.go-version']
