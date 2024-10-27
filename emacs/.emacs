@@ -141,7 +141,11 @@
         lsp-ui-imenu-enable t
         lsp-ui-flycheck-enable t))
 
-(use-package colorful-mode)
+(use-package colorful-mode
+  :ensure t
+  :config
+  (global-colorful-mode 1)
+  (setq colorful-allow-mouse-clicks t))
 
 (provide '.emacs)
 ;;; .emacs ends here

@@ -31,7 +31,8 @@
 window#waybar {
     color: #ffffff;
     background-color: #006184;
-    border-bottom: 3px solid rgba(35, 185, 171, 0.4)
+    border-bottom: 3px solid rgba(35, 185, 171, 0.4);
+    opacity: 0.9;
 }
 
 window#waybar.solo {

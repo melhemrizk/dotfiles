@@ -17,9 +17,9 @@ background-color: #23b9ab;
 
 
 #input {
-font: Hack;
-font-size: 16;
-color: #ffffff
+font-family: Hack;
+font-size: 16px;
+color: #ffffff;
 margin: 5px;
 border-radius: 5px;
 border: 2px solid #006184;
@@ -31,7 +31,7 @@ margin: 5px;
 border-radius: 5px;
 border: 2px solid #23b9ab;
 background-color: #190018;
-opacity: 0.9
+opacity: 0.9;
 }
 
 #outer-box {
@@ -49,8 +49,8 @@ background-color: #0e4d47;
 }
 
 #text {
-font: Hack;
-font-size: 18;
+font-family: Hack;
+font-size: 18px;
 margin: 5px;
 border-radius: 5px;
 border: 2px solid transparent;
@@ -58,7 +58,7 @@ background-color: transparent;
 }
 
 #entry {
-color: #ffffff
+color: #ffffff;
 }
 
 #entry:selected {

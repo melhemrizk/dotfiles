@@ -33,8 +33,8 @@ add_newline = true
 # Displays the user name
 [username]
 show_always = true
-style_user = "bold fg:#11dfff"
-style_root = "fg:#ff0000"
+style_user = "bold fg:#23b9ab"
+style_root = "fg:#ff3333"
 format = '[ ✠ $user ✠ ]($style)'
 disabled = false
 
