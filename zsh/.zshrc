@@ -6,7 +6,9 @@
  ##      ##    ## ##     ##    ##    ## ##     ## ##       ##       ##
 ########  ######  ##     ##     ######  ##     ## ######## ######## ########
 
-# ZSH configuration file
+# --------------------------
+# | ZSH configuration file |
+# --------------------------
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
@@ -23,49 +25,12 @@ export EDITOR=/usr/bin/emacs
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME=""
 
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
-
-# Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-
-# Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
-
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# You can also set it to another string to have that shown instead of the default red dots.
-# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
-# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -84,7 +49,7 @@ HIST_STAMPS="dd/mm/yyyy"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-plugins=(golang git command-not-found docker)
+plugins=(golang command-not-found docker)
 
 #Golang plugin aliases for reference
 #gob 	go build 	Build your code
@@ -140,8 +105,11 @@ source $ZSH/oh-my-zsh.sh
 # - $ZSH_CUSTOM/aliases.zsh
 # - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
-#
-# History
+
+# -----------
+# | History |
+# -----------
+
 HISTSIZE=5000
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
@@ -154,6 +122,9 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
+# ---------
+# | Conda |
+# ---------
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/$HOME/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -169,15 +140,28 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# Starship prompt
+# -------------------
+# | Starship prompt |
+# -------------------
+
 eval "$(starship init zsh)"
 
-# Initialize zoxide
+# ----------
+# | Zoxide |
+# ----------
+
 eval "$(zoxide init --cmd cd zsh)"
-# Initialize fuzzy find
+
+# ------------------
+# | fuzzy find FZF |
+# ------------------
+
 eval "$(fzf --zsh)"
 
-# ZSH syntax highlighting
+# ---------------------------
+# | ZSH syntax highlighting |
+# ---------------------------
+
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
