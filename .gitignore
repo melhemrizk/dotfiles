@@ -7,3 +7,6 @@ emacs/.emacs.d
 emacs/.authinfo
 color.css
 blackbird.css
+sway/
+kitty/.config/kitty/assets/
+hyprland/.config/hypr/assets/
