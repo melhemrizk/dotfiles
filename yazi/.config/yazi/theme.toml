@@ -170,11 +170,11 @@ icon_info  = ""
 icon_warn  = ""
 icon_error = ""
 
-
-# : File-specific styles {{{
+# ------------------------
+# | File-specific styles |
+# ------------------------
 
 [filetype]
-
 rules = [
 	# Images
 	{ mime = "image/*", fg = "yellow" },
