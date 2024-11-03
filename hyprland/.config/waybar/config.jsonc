@@ -28,7 +28,8 @@
         "bluetooth",
         "network",
         "clock#date",
-        "clock#time"
+        "clock#time",
+	"custom/windows-vm"
     ],
     // Modules configuration
     "hyprland/workspaces": {
@@ -135,5 +136,10 @@
 	"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
 	"on-click": "~/.config/waybar/scripts/bluetooth-connect.zsh",
 	"on-click-right": "~/.config/waybar/scripts/bluetooth-disconnect.zsh",
+     },
+     "custom/windows-vm": {
+     	"format": "",
+	"tooltip-format": "Launch windows 10",
+	"on-click": "~/.config/waybar/scripts/launch-win-vm.zsh"
      },
 }

@@ -70,16 +70,20 @@ tooltip label {
     border-radius: 1rem;
 }
 
-#tray
+#custom-windows-vm,
+#tray,
 #network, 
 #bluetooth,
-#power-profiles-daemon,
 #clock.date,
 #clock.time,
 #pulseaudio {
     padding: 0 5px;
     margin: 5px;
     border-radius: 10px;
+}
+
+#tray {
+   background-color: #99D17B;
 }
 
 #pulseaudio {
@@ -117,3 +121,8 @@ tooltip label {
     background-color: #403d39
 }
 
+#custom-windows-vm {
+    color: #1AFFD5;
+    background-color: transparent;
+	   
+}
