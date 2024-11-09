@@ -105,12 +105,24 @@ tooltip label {
 }
 
 #bluetooth.connected {
-    color: #0010f5;
+    color: #0B132B;
     background-color: #F77F00
 }
 
 #network {
     background-color: #6689A1
+}
+
+#network.ethernet {
+    background-color: #04A777
+}
+
+#network.wifi {
+    background-color: #034748
+}
+
+#network.disconnected {
+    background-color: #D62828
 }
 
 #clock.date {

@@ -60,7 +60,9 @@
         "class<.*emacs.*>": "",
         "class<.*vim.*>": "",
         "Konsole": "  ",
-        "Vscodium": "󰨞"
+        "Vscodium": "󰨞",
+	"class<.*Github.*>": "",
+	"class<.*kmail.*>": ""
         }
     },
     "hyprland/window": {
@@ -73,11 +75,11 @@
      },
      "clock#time": {
         "timezone": "Asia/Beirut",
-        "format": "{:%H:%M} ",
+        "format": "{:%H:%M}",
         "tooltip": false
      },
      "clock#date": {
-        "format": "{:%A, %b %d, %Y}",
+        "format": "{:%a, %b %d}",
         "tooltip-format": "<tt><big>{calendar}</big></tt>",
         "calendar": {
                     "mode"          : "month",
@@ -99,9 +101,10 @@
     },
     "network": {
         //"interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{ipaddr}/{cidr} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-wifi": "({signalStrength}%) ",
+        "format-ethernet": "",
+        "tooltip-format-ethernet": "{ipaddr} ",
+        "tooltip-format-wifi": "{ipaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{essid} {ifname}: {ipaddr}"
