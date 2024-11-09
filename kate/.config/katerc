@@ -52,6 +52,9 @@ Tab Double Click New Document=true
 Tab Middle Click Close Document=true
 Tabbar Tab Limit=0
 
+[KDE]
+widgetStyle=qt6ct-style
+
 [KTextEditor Document]
 Allow End of Line Detection=true
 Auto Detect Indent=true
@@ -93,7 +96,7 @@ Word Wrap=false
 Word Wrap Column=120
 
 [KTextEditor Renderer]
-Animate Bracket Matching=false
+Animate Bracket Matching=true
 Auto Color Theme Selection=false
 Color Theme=Catppuccin Mocha
 Line Height Multiplier=1
@@ -111,7 +114,7 @@ Auto Completion=true
 Auto Completion Preselect First Entry=true
 Backspace Remove Composed Characters=false
 Bookmark Menu Sorting=0
-Bracket Match Preview=false
+Bracket Match Preview=true
 Chars To Enclose Selection=<>(){}[]'"
 Default Mark Type=1
 Dynamic Word Wrap=false
@@ -146,14 +149,14 @@ Shoe Line Ending Type in Statusbar=false
 Show Documentation With Completion=true
 Show File Encoding=true
 Show Folding Icons On Hover Only=true
-Show Line Count=false
+Show Line Count=true
 Show Scrollbars=0
 Show Statusbar Dictionary=true
 Show Statusbar Highlighting Mode=true
 Show Statusbar Input Mode=true
 Show Statusbar Line Column=true
 Show Statusbar Tab Settings=true
-Show Word Count=false
+Show Word Count=true
 Smart Copy Cut=true
 Statusbar Line Column Compact Mode=true
 Text Drag And Drop=true
@@ -174,6 +177,9 @@ SetEditor=false
 
 [MainWindow]
 1920x1080 screen: Window-Maximized=true
+
+[UiSettings]
+ColorScheme=Breeze Dark
 
 [filetree]
 editShade=5,94,83
