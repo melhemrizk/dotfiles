@@ -1,6 +1,6 @@
 [ColorPicker]
 HexLengths=3,6,8,9,12
-NamedColors=false
+NamedColors=true
 PreviewAfterColor=true
 
 [ColoredBrackets]
