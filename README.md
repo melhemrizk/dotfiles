@@ -22,3 +22,5 @@
 <code>sudo zypper in hyprland hypridle hyprlock hyprpaper hyprshot xdg-desktop-portal-hyprland swaync wofi fontawesome-fonts pavucontrol-qt</code> 
 <p></p>
 <code>sudo zypper in waybar --no-recommends</code>
+<p></p>
+<code>sudo zypper in rofi rofi-bluetooth rofi-network-manager
