@@ -1,0 +1,119 @@
+{
+  "$schema": "/etc/xdg/swaync/configSchema.json",
+
+  // SECTION 1: POSITIONING AND LAYOUT
+  // Controls where and how the notification center appears
+  "positionX": "right",                    // Align to right side of screen
+  "positionY": "top",                      // Align to top of screen
+  "layer": "overlay",                      // Notifications appear in overlay layer
+  "control-center-layer": "top",           // Control center appears in top layer
+  "layer-shell": true,                     // Uses Wayland layer shell protocol
+  "cssPriority": "application",            // CSS priority for styling
+
+  // SECTION 2: MARGINS
+  // Spacing around the control center
+  "control-center-margin-top": 0,
+  "control-center-margin-bottom": 0,
+  "control-center-margin-right": 0,
+  "control-center-margin-left": 0,
+
+  // SECTION 3: NOTIFICATION BEHAVIOR
+  // Settings that control how notifications work
+  "notification-2fa-action": true,         // Enable 2FA action support
+  "notification-inline-replies": false,    // Disable inline reply feature
+  "notification-icon-size": 64,            // Size of notification icons
+  "notification-body-image-height": 100,   // Height for notification images
+  "notification-body-image-width": 200,    // Width for notification images
+  "timeout": 10,                           // Default timeout (seconds)
+  "timeout-low": 5,                        // Timeout for low priority
+  "timeout-critical": 0,                   // No timeout for critical notifications
+
+  // SECTION 4: DISPLAY SETTINGS
+  // Visual and behavioral settings
+  "fit-to-screen": true,                   // Adjust size to fit screen
+  "relative-timestamps": true,             // Show relative time (e.g., "2m ago")
+  "control-center-width": 500,             // Width of control center
+  "control-center-height": 600,            // Height of control center
+  "notification-window-width": 500,        // Width of notification popups
+  "keyboard-shortcuts": true,              // Enable keyboard controls
+  "image-visibility": "when-available",    // Show images when they exist
+  "transition-time": 200,                  // Animation duration (ms)
+
+  // SECTION 5: BEHAVIOR FLAGS
+  // Various behavior toggles
+  "hide-on-clear": false,                  // Don't hide when clearing notifications
+  "hide-on-action": true,                  // Hide after action is taken
+  "script-fail-notify": true,              // Notify on script failures
+
+  // SECTION 6: SCRIPTS
+  // Custom scripts that can be triggered
+  "scripts": {
+    "example-script": {
+      "exec": "echo 'Do something...'",
+      "urgency": "Normal"
+    },
+    "example-action-script": {
+      "exec": "echo 'Do something actionable!'",
+      "urgency": "Normal",
+      "run-on": "action"
+    }
+  },
+
+  // SECTION 7: APP-SPECIFIC SETTINGS
+  // Control notifications from specific applications
+  "notification-visibility": {
+    "spotify": {
+      "state": "muted",                    // Mute notifications from this app
+      "urgency": "Low",                    // Set urgency level
+      "app-name": "Spotify"                // Apply to Spotify
+    }
+  },
+
+  // SECTION 8: WIDGET CONFIGURATION
+  // Define which widgets appear and in what order
+  "widgets": [
+    "inhibitors",                          // Show active inhibitors
+    "title",                              // Title section
+    "dnd",                                // Do Not Disturb toggle
+    "notifications"                        // Notifications list
+  ],
+
+  // SECTION 9: DETAILED WIDGET SETTINGS
+  // Configure individual widget behavior
+  "widget-config": {
+    "inhibitors": {
+      "text": "Inhibitors",
+      "button-text": "Clear All",
+      "clear-all-button": true
+    },
+    "title": {
+      "text": "Notifications",
+      "clear-all-button": true,
+      "button-text": "Clear All"
+    },
+    "dnd": {
+      "text": "Do Not Disturb"
+    },
+    "label": {
+      "max-lines": 5,
+      "text": "Label Text"
+    },
+    "mpris": {
+      "image-size": 96,
+      "image-radius": 12
+    },
+    // SECTION 10: CUSTOM BUTTONS
+    // Define custom action buttons (in this case, a WiFi toggle)
+    "buttons-grid": {
+      "actions": [
+        {
+          "label": "直",                    // WiFi symbol
+          "type": "toggle",                // Toggle button type
+          "active": true,                  // Initially active
+          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && nmcli radio wifi on || nmcli radio wifi off'",
+          "update_command": "sh -c '[[ $(nmcli radio wifi) == \"enabled\" ]] && echo true || echo false'"
+        }
+      ]
+    }
+  }
+}

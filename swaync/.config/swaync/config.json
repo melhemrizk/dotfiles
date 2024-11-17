@@ -18,7 +18,7 @@
   "timeout": 10,
   "timeout-low": 5,
   "timeout-critical": 0,
-  "fit-to-screen": true,
+  "fit-to-screen": false,
   "relative-timestamps": true,
   "control-center-width": 500,
   "control-center-height": 600,
@@ -41,10 +41,15 @@
     }
   },
   "notification-visibility": {
-    "example-name": {
-      "state": "muted",
+    "spotify": {
+      "state": "enabled",
       "urgency": "Low",
       "app-name": "Spotify"
+    },
+    "email": {
+      "state": "enabled",
+      "urgency": "normal",
+      "app-name": "Kmail"
     }
   },
   "widgets": [
@@ -78,7 +83,7 @@
     "buttons-grid": {
       "actions": [
         {
-          "label": "直",
+          "label": "直",
           "type": "toggle",
           "active": true,
           "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && nmcli radio wifi on || nmcli radio wifi off'",
