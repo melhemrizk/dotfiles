@@ -33,7 +33,7 @@ add_newline = true
 # Displays the user name
 [username]
 show_always = true
-style_user = "bold fg:#71A9F7"
+style_user = "bold fg:#2FD4F5"
 style_root = "fg:#ff3333"
 format = '[ ✠ $user ✠ ]($style)'
 disabled = false
@@ -51,14 +51,14 @@ openSUSE = "🦎"
 [hostname]
 ssh_only = false
 # ssh_symbol = '🌐 '
-style = "bold fg:#D90368"
+style = "bold fg:#B32FF5"
 format = '[ ✠ $hostname ✠ ]($style)'
 disabled = false
 
 # Displays the current working directory
 [directory]
 read_only = ' 🔒'
-style = "bold italic fg:#F4AC45"
+style = "bold italic fg:#F5502F"
 read_only_style = "fg:#ff0000"
 format = "[$path]($style)[$read_only]($read_only_style)"
 truncation_length = 3
@@ -70,13 +70,13 @@ format = 'took [$duration]($style)'
 min_time = 4
 show_milliseconds = false
 disabled = false
-style = "bold italic fg:#04A777"
+style = "bold italic fg:#FBFF00"
 
 # Displays the time in 24hr format
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
-style = "bold fg:#F98948"
+style = "bold fg:#71F52F"
 format = '[ 🕙 $time ]($style)'
 
 [character]
@@ -89,7 +89,7 @@ disabled = false
 symbol = "🐍 "
 pyenv_version_name = true
 format = '[ via ${symbol}python (${version} )(\($virtualenv\) )]($style)'
-style = "bold fg:#99D17B"
+style = "bold fg:#7BFF00"
 pyenv_prefix = "venv "
 python_binary = ["./venv/bin/python", "python", "python3"]
 detect_extensions = ["py"]
@@ -104,7 +104,7 @@ ignore_base = false
 disabled = false
 
 [rust]
-style = "fg:#F77F00"
+style = "fg:#FF8400"
 format = '[ via $symbol($version )]($style)'
 
 [git_branch]
@@ -129,7 +129,7 @@ disabled = false
 [git_metrics]
 added_style = 'bold fg:#1eff1a'
 deleted_style = 'bold fg:#ff1111'
-format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
+format = ' [+$added]($added_style)|[-$deleted]($deleted_style) '
 disabled = false
 
 [git_status]
@@ -142,15 +142,15 @@ diverged = '⤨'
 up_to_date = '✓'
 untracked = '🤷'
 stashed = '📦'
-modified = '📝'
-staged = '[++\($count\)](green)'
+modified = ' 📝'
+staged = '[ ++\($count\)](green)'
 renamed = '👅'
 deleted = '🗑'
 disabled = false
 
 [golang]
 symbol = "🏎💨 "
-style = "bold fg:#1AFFD5"
+style = "bold fg:#00DBFF"
 format = '[ via $symbol ($version)($mod_version)]($style)'
 detect_extensions = ['go']
 detect_files = ['go.mod', 'go.sum', 'go.work', 'glide.yaml', 'Gopkg.yml', 'Gopkg.lock', '.go-version']

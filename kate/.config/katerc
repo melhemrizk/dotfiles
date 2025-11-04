@@ -10,20 +10,20 @@ color3=#9dba1e
 color4=#e219e2
 color5=#37d21c
 
-[FileDialogSize]
-1920x1080 screen: Window-Maximized=true
-
 [General]
 Allow Tab Scrolling=true
 Auto Hide Tabs=false
 Close After Last=false
 Close documents with window=true
+Cycle To First Tab=true
 Days Meta Infos=30
 Diagnostics Limit=12000
 Diff Show Style=0
 Elide Tab Text=false
+Enable Context ToolView=false
 Expand Tabs=false
 Icon size for left and right sidebar buttons=32
+Last Session=eulerProject
 Modified Notification=false
 Mouse back button action=0
 Mouse forward button action=0
@@ -34,6 +34,8 @@ Recent File List Entry Count=10
 Restore Window Configuration=true
 SDI Mode=false
 Save Meta Infos=true
+Session Manager Sort Column=0
+Session Manager Sort Order=0
 Show Full Path in Title=false
 Show Menu Bar=true
 Show Status Bar=true
@@ -44,7 +46,7 @@ Show Url Nav Bar=true
 Show output view for message type=1
 Show text for left and right sidebar=false
 Show welcome view for new window=true
-Startup Session=manual
+Startup Session=last
 Stash new unsaved files=true
 Stash unsaved file changes=false
 Sync section size with tab positions=false
@@ -58,6 +60,7 @@ widgetStyle=qt6ct-style
 [KTextEditor Document]
 Allow End of Line Detection=true
 Auto Detect Indent=true
+Auto Reload If Any External Changes Occurs=false
 Auto Reload If State Is In Version Control=true
 Auto Save=false
 Auto Save Interval=0
@@ -74,7 +77,7 @@ Indent On Backspace=true
 Indent On Tab=true
 Indent On Text Paste=true
 Indentation Mode=normal
-Indentation Width=4
+Indentation Width=2
 Keep Extra Spaces=false
 Line Length Limit=10000
 Newline at End of File=true
@@ -82,7 +85,7 @@ On-The-Fly Spellcheck=false
 Overwrite Mode=false
 PageUp/PageDown Moves Cursor=false
 Remove Spaces=1
-ReplaceTabsDyn=true
+ReplaceTabsDyn=false
 Show Spaces=0
 Show Tabs=true
 Smart Home=true
@@ -90,10 +93,11 @@ Swap Directory=
 Swap File Mode=1
 Swap Sync Interval=15
 Tab Handling=2
-Tab Width=4
-Trailing Marker Size=1
+Tab Width=2
+Trailing Marker Size=2
+Use Editor Config=true
 Word Wrap=false
-Word Wrap Column=120
+Word Wrap Column=150
 
 [KTextEditor Renderer]
 Animate Bracket Matching=true
@@ -102,7 +106,7 @@ Color Theme=Catppuccin Mocha
 Line Height Multiplier=1
 Show Indentation Lines=false
 Show Whole Bracket Expression=false
-Text Font=Hack,22,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+Text Font=FiraCode Nerd Font Light,19,-1,5,300,0,0,0,0,0,0,0,0,0,0,1,Regular
 Text Font Features=
 Word Wrap Marker=false
 
@@ -115,14 +119,15 @@ Auto Completion Preselect First Entry=true
 Backspace Remove Composed Characters=false
 Bookmark Menu Sorting=0
 Bracket Match Preview=true
-Chars To Enclose Selection=<>(){}[]'"
+Chars To Enclose Selection=´`_.:|#@~*!?$%/=,;-+^°§&
+Cycle Through Bookmarks=true
 Default Mark Type=1
 Dynamic Word Wrap=false
 Dynamic Word Wrap Align Indent=80
 Dynamic Word Wrap At Static Marker=false
 Dynamic Word Wrap Indicators=1
 Dynamic Wrap not at word boundaries=false
-Enable Accessibility=true
+Enable Accessibility=false
 Enable Tab completion=false
 Enter To Insert Completion=true
 Fold First Line=false
@@ -143,7 +148,7 @@ Scroll Bar Mini Map All=true
 Scroll Bar Mini Map Width=60
 Scroll Bar MiniMap=true
 Scroll Bar Preview=true
-Scroll Past End=false
+Scroll Past End=true
 Search/Replace Flags=140
 Shoe Line Ending Type in Statusbar=false
 Show Documentation With Completion=true
@@ -168,7 +173,7 @@ Word Completion Minimal Word Length=3
 Word Completion Remove Tail=true
 
 [Konsole]
-AutoSyncronizeMode=0
+AutoSyncronizeMode=1
 KonsoleEscKeyBehaviour=true
 KonsoleEscKeyExceptions=vi,vim,nvim,git
 RemoveExtension=false
@@ -176,10 +181,18 @@ RunPrefix=
 SetEditor=false
 
 [MainWindow]
+1920x1080 screen: Height=1008
+1920x1080 screen: Width=1920
 1920x1080 screen: Window-Maximized=true
 
+[Replicode]
+replicodePath=
+
 [UiSettings]
-ColorScheme=Breeze Dark
+ColorScheme=BreezeDark
+
+[debugplugin]
+DAPConfiguration=
 
 [filetree]
 editShade=5,94,83
@@ -200,14 +213,16 @@ BlockedServerCommandLines=
 CompletionDocumentation=true
 CompletionParens=true
 Diagnostics=true
-FormatOnSave=false
+FormatOnSave=true
 HighlightGoto=true
+HighlightSymbol=false
 IncrementalSync=false
 InlayHints=false
 Messages=true
 ReferencesDeclaration=true
 SemanticHighlighting=true
 ServerConfiguration=
+ShowCompletions=true
 SignatureHelp=true
 SymbolDetails=false
 SymbolExpand=true
