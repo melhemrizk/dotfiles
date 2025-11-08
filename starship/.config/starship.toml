@@ -149,7 +149,7 @@ deleted = '🗑'
 disabled = false
 
 [golang]
-symbol = "🏎💨 "
+symbol = " "
 style = "bold fg:#00DBFF"
 format = '[ via $symbol ($version)($mod_version)]($style)'
 detect_extensions = ['go']
