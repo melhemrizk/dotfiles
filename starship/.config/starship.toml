@@ -67,8 +67,8 @@ truncation_symbol = "…/"
 # Displays the time it takes to execute a command
 [cmd_duration]
 format = 'took [$duration]($style)'
-min_time = 4
-show_milliseconds = false
+min_time = 1
+show_milliseconds = true
 disabled = false
 style = "bold italic fg:#FBFF00"
 
@@ -81,8 +81,8 @@ format = '[ 🕙 $time ]($style)'
 
 [character]
 format = '$symbol '
-success_symbol = "[❱](bold fg:#D90368)"
-error_symbol = "[❱](bold fg:#F90000)"
+success_symbol = "[❱](bold fg:#F5B027)"
+error_symbol = "[✖](bold fg:#F90000)"
 disabled = false
 
 [python]
@@ -121,7 +121,7 @@ tag_symbol = '🔖 '
 disabled = false
 
 [git_state]
-style = "bold fg#ffffff"
+style = "bold fg:#ffffff"
 format = '[\($state( $progress_current of $progress_total)\)]($style) '
 cherry_pick = '[🍒 PICKING](bold red)'
 disabled = false
