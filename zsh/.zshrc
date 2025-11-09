@@ -19,7 +19,6 @@ export ZSH="$HOME/.oh-my-zsh"
 # Editor
 export EDITOR=/usr/bin/emacs
 
-
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME

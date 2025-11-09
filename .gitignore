@@ -1,6 +1,5 @@
 sway/
-emacs/.config/emacs/auto-save-list
-emacs/.config/emacs/eln-cache
-emacs/.config/emacs/elpa
-emacs/.config/emacs/.lsp-session-v1
-emacs/.config/emacs/authinfo
+emacs/
+!emacs/.emacs.d/early-init.el
+!emacs/.emacs.d/gnu-emacs-custom
+!emacs/.emacs.d/init.el
