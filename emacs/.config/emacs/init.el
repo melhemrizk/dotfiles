@@ -14,7 +14,7 @@
 ;;; Code:
 
 ;; Custom file
-(setq custom-file "~/.gnu-emacs-custom")
+(setq custom-file "~/.config/emacs/gnu-emacs-custom")
 (load custom-file t)
 
 ;; Initialize package sources
@@ -115,7 +115,7 @@
          ("C-c C-j" . lsp-find-definition)
          ("C-c C-d" . lsp-describe-thing-at-point)))
 
-  
+
  (setq gc-cons-threshold 10000000)
  (setq read-process-output-max (* 128 1024))
  (defun lsp-go-install-save-hooks ()
@@ -149,3 +149,4 @@
 
 (provide '.emacs)
 ;;; .emacs ends here
+

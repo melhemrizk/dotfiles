@@ -1,5 +1,6 @@
-emacs/.emacs.d
-emacs/.authinfo
 sway/
-
-
+emacs/.config/emacs/auto-save-list
+emacs/.config/emacs/eln-cache
+emacs/.config/emacs/elpa
+emacs/.config/emacs/.lsp-session-v1
+emacs/.config/emacs/authinfo
