@@ -33,7 +33,7 @@ add_newline = true
 # Displays the user name
 [username]
 show_always = true
-style_user = "bold fg:#2FD4F5"
+style_user = "fg:#2FD4F5"
 style_root = "fg:#ff3333"
 format = '[ ✠ $user ✠ ]($style)'
 disabled = false
@@ -51,14 +51,14 @@ openSUSE = "🦎"
 [hostname]
 ssh_only = false
 # ssh_symbol = '🌐 '
-style = "bold fg:#B32FF5"
+style = "fg:#B32FF5"
 format = '[ ✠ $hostname ✠ ]($style)'
 disabled = false
 
 # Displays the current working directory
 [directory]
 read_only = ' 🔒'
-style = "bold italic fg:#F5502F"
+style = "italic fg:#F5502F"
 read_only_style = "fg:#ff0000"
 format = "[$path]($style)[$read_only]($read_only_style)"
 truncation_length = 3
@@ -70,13 +70,13 @@ format = 'took [$duration]($style)'
 min_time = 1
 show_milliseconds = true
 disabled = false
-style = "bold italic fg:#FBFF00"
+style = "italic fg:#FBFF00"
 
 # Displays the time in 24hr format
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
-style = "bold fg:#71F52F"
+style = "fg:#71F52F"
 format = '[ 🕙 $time ]($style)'
 
 [character]
@@ -150,7 +150,7 @@ disabled = false
 
 [golang]
 symbol = " "
-style = "bold fg:#00DBFF"
+style = "fg:#00DBFF"
 format = '[ via $symbol ($version)($mod_version)]($style)'
 detect_extensions = ['go']
 detect_files = ['go.mod', 'go.sum', 'go.work', 'glide.yaml', 'Gopkg.yml', 'Gopkg.lock', '.go-version']
