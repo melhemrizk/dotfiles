@@ -104,6 +104,13 @@
      ("gopls.staticcheck" t t)))
   (setq lsp-auto-guess-root t))         ;; This helps with project root detection.
 
+;; Function to run Go files
+(defun go-run-file ()
+  "Run the current Go file using 'go run <filename>'."
+  (interactive)
+  (let ((compile-command (concat "go run " buffer-file-name)))
+    (compile compile-command)))
+
 ;; Go mode setup
 (use-package go-mode
   :ensure t
@@ -114,7 +121,8 @@
   (require 'lsp-go)
   :bind (:map go-mode-map
          ("C-c C-j" . lsp-find-definition)
-         ("C-c C-d" . lsp-describe-thing-at-point)))
+         ("C-c C-d" . lsp-describe-thing-at-point)
+         ("C-c C-r" . go-run-file)))
 
 
  (setq gc-cons-threshold 10000000)
