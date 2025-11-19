@@ -1,3 +1,7 @@
+;;; package --- summary ;; -*- lexical-binding: t; -*-
+;; Emacs configuration
+;;; Commentary:
+
 ;; ######## ##     ##    ###     ######   ######
 ;; ##       ###   ###   ## ##   ##    ## ##    ##
 ;; ##       #### ####  ##   ##  ##       ##
@@ -5,11 +9,6 @@
 ;; ##       ##     ## ######### ##             ##
 ;; ##       ##     ## ##     ## ##    ## ##    ##
 ;; ######## ##     ## ##     ##  ######   ######
-
-
-;;; package --- summary
-;; Emacs configuration
-;;; Commentary:
 
 
 ;;; Code:
@@ -53,16 +52,19 @@
 ;; Auto-save and backup settings
 (setq auto-save-visited-mode t
       backup-by-copying t
-      backup-directory-alist '(("." . "~/.emacs.d/.backup"))
+      backup-directory-alist '(("." . "~/.emacs.d/.backup/"))
       delete-old-versions t
       kept-new-versions 3
       kept-old-versions 2
       version-control t
-      initial-scratch-message "")
+      initial-scratch-message ""
+      auto-save-file-name-transforms '((".*" "~/.emacs.d/.auto-saves/" t)))
 
 ;; Ido mode
-(ido-mode 1)
-(ido-everywhere 1)
+(require 'ido)
+(ido-mode t)
+(setq ido-enable-flex-matching t)
+(setq ido-everywhere t)
 
 ;; Multiple cursors
 (use-package multiple-cursors
@@ -91,22 +93,25 @@
   :ensure t
   :hook ((go-mode . lsp-deferred))
   :commands lsp lsp-deferred
+  :custom
+  (lsp-gopls-server-path "gopls")  ;; Ensure this path is correct.
+  ;;(setq lsp-go-link-target "godoc")
+  (lsp-go-use-placeholders t)
+  (lsp-gopls-staticcheck t)
+  (lsp-eldoc-render-all t)
+  (lsp-gopls-complete-unimported t)
+  (lsp-auto-guess-root t) ;; This helps with project root detection.
+  (lsp-register-custom-settings t)
   :config
-  (setq lsp-gopls-server-path "gopls")  ;; Ensure this path is correct.
-  (setq lsp-go-link-target "godoc")
-  (setq lsp-go-use-placeholders t)
   (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]\\vendor\\'")
-  (setq lsp-gopls-staticcheck t
-	lsp-eldoc-render-all t
-	lsp-gopls-complete-unimported t)
   (lsp-register-custom-settings
-   '(("gopls.completeUnimported" t t)
-     ("gopls.staticcheck" t t)))
-  (setq lsp-auto-guess-root t))         ;; This helps with project root detection.
+    '(("gopls.completeUnimported" t t)
+      ("gopls.staticcheck" t t))))
 
+  
 ;; Function to run Go files
 (defun go-run-file ()
-  "Run the current Go file using 'go run <filename>'."
+  "Run the current Go file using `go run <filename>`'."
   (interactive)
   (let ((compile-command (concat "go run " buffer-file-name)))
     (compile compile-command)))
@@ -122,11 +127,13 @@
   :bind (:map go-mode-map
          ("C-c C-j" . lsp-find-definition)
          ("C-c C-d" . lsp-describe-thing-at-point)
-         ("C-c C-r" . go-run-file)))
+         ("C-c C-r" . go-run-file)
+         ("C-c C-v" . lsp-ui-doc-show)))
 
 
  (setq gc-cons-threshold 10000000)
  (setq read-process-output-max (* 128 1024))
+ (setq compile-command "go run .")
  (defun lsp-go-install-save-hooks ()
   (add-hook 'before-save-hook #'lsp-format-buffer t t)
   (add-hook 'before-save-hook #'lsp-organize-imports t t)
@@ -140,11 +147,21 @@
         company-minimum-prefix-length 1))
 
 ;; LSP UI customization
+(use-package flycheck
+  :ensure t
+  :init
+  (global-flycheck-mode))
+
 (use-package lsp-ui
   :ensure t
+  :after lsp-mode
+  :hook (lsp-mode . lsp-ui-mode)
   :commands lsp-ui-mode
   :config
   (setq lsp-ui-doc-enable t
+	lsp-ui-doc-show-with-cursor t
+	lsp-ui-doc-position 'at-point
+	lsp-ui-doc-delay 0.3
         lsp-ui-peek-enable t
         lsp-ui-sideline-enable t
         lsp-ui-imenu-enable t
@@ -156,6 +173,4 @@
   (global-colorful-mode 1)
   (setq colorful-allow-mouse-clicks t))
 
-(provide '.emacs)
-;;; .emacs ends here
-
+;;; init.el ends here

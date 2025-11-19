@@ -89,8 +89,8 @@ ReplaceTabsDyn=false
 Show Spaces=0
 Show Tabs=true
 Smart Home=true
-Swap Directory=
-Swap File Mode=1
+Swap Directory=/home/blackbird/.local/share/kate/swapFiles
+Swap File Mode=2
 Swap Sync Interval=15
 Tab Handling=2
 Tab Width=2
@@ -98,6 +98,10 @@ Trailing Marker Size=2
 Use Editor Config=true
 Word Wrap=false
 Word Wrap Column=150
+
+[KTextEditor Editor]
+Encoding Prober Type=1
+Fallback Encoding=UTF-16
 
 [KTextEditor Renderer]
 Animate Bracket Matching=true
